@@ -8,18 +8,18 @@ const InvoiceExtractor = () => {
   const [inputPrompt, setInputPrompt] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
-const API_KEY = 'AIzaSyBpUjTpTatEQa_t7e8H4nRnSuqwKDsFAZQ';
+  
   const handleImageUpload = (event) => {
     setInvoiceImage(event.target.files[0]);
   };
-  
+
   const handleSubmit = async () => {
     setIsLoading(true);
     setError(null);
     setExtractedText('');
 
     try {
-      const genAI = new GoogleGenerativeAI(API_KEY);  
+      const genAI = new GoogleGenerativeAI(API_KEY);
       const model = genAI.getGenerativeModel({ model: 'gemini-pro-vision' });
 
       const invoiceImagePart = await fileToGenerativePart(invoiceImage, 'image/jpeg');
