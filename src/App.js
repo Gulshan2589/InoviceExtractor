@@ -9,7 +9,7 @@ const InvoiceExtractor = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
-const gemniapikey = 'AIzaSyBpUjTpTatEQa_t7e8H4nRnSuqwKDsFAZQ';
+
 
   const handleImageUpload = (event) => {
     setInvoiceImage(event.target.files[0]);
