@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+Invoice Extractor
+This React application utilizes the Google Generative AI to extract text information from invoice images. The application allows users to upload an invoice image, provide an input prompt, and then generates extracted text based on the image and the input prompt.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Getting Started
+Prerequisites
+Make sure you have the following dependencies installed:
 
-## Available Scripts
+Node.js (v14.0.0 or later)
+npm (v7.0.0 or later)
+Installation
+Clone the repository:
 
-In the project directory, you can run:
 
-### `npm start`
+git clone <repository-url>
+Navigate to the project directory:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+cd <project-directory>
+Install the required packages:
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+npm install
+Usage
+Obtain a Google Generative AI API key from Google Cloud Console.
 
-### `npm run build`
+Replace the placeholder API key in InvoiceExtractor.js:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+const API_KEY = 'your-api-key';
+Run the application:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+npm start
+Open your browser and visit http://localhost:3000 to use the Invoice Extractor.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Features
+Input Prompt: Enter a prompt to guide the Generative AI in understanding the invoice image.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Upload Invoice Image: Upload an image of an invoice for text extraction.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Extracted Text: View the extracted text information from the invoice image.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Loading Indicator: A loading indicator appears during the extraction process.
 
-## Learn More
+Error Handling: In case of any errors during the extraction process, an error message is displayed.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+File Structure
+InvoiceExtractor.js: Main component containing the logic for handling image upload, form submission, and interaction with Google Generative AI.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+App.css: Stylesheet for the application.
 
-### Code Splitting
+Dependencies
+@google/generative-ai: Library for interacting with Google Generative AI.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+React: JavaScript library for building user interfaces.
 
-### Analyzing the Bundle Size
+Scripts
+start: Start the development server.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+build: Build the production-ready application.
 
-### Making a Progressive Web App
+test: Run tests.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+eject: Eject from Create React App configuration.
 
-### Advanced Configuration
+Contributing
+Feel free to contribute to the project by opening issues or creating pull requests.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+License
+This project is licensed under the MIT License.
